@@ -1,2 +1,37 @@
 
 /* Your CSS Code here. */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 10px;
+}
+
+.item {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    flex: 0 1 calc(33.33% - 20px); 
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .item {
+        flex: 0 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex: 0 1 calc(100% - 20px);
+    }
+}
